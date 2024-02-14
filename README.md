@@ -14,4 +14,5 @@ Package | Version | Status
 :---|:---|:---:
 LLVM | 18.1.0-rc2 | [![Build Status](https://www.johnnyw.ca/jenkins/buildStatus/icon?job=linux-apps%2Fllvm-18.1)](https://www.johnnyw.ca/jenkins/job/linux-apps/job/llvm-18.1/)
 Linux Kernel (headers) | 6.6.16 | [![Build Status](https://www.johnnyw.ca/jenkins/buildStatus/icon?job=linux-apps%2Flinux-kernel-headers-6.6)](https://www.johnnyw.ca/jenkins/job/linux-apps/job/linux-kernel-headers-6.6/)
-glibc | 2.39 | Not in repo
+GCC | 13.2 | Not in repo
+glibc | 2.39 | [![Build Status](https://www.johnnyw.ca/jenkins/buildStatus/icon?job=linux-apps%2Fglibc-2.39)](https://www.johnnyw.ca/jenkins/job/linux-apps/job/glibc-2.39/)

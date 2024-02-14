@@ -31,7 +31,7 @@ pipeline{
                 dir('linux-6.6.16'){
                     // Using host toolchain for now, but this is okay since it is just the headers
                     sh script: 'make headers', label: 'build linux-headers'
-                    sh script: 'tar -czvf linux-headers-6.6.16.tar.gz usr/include/**/*.h', label: 'create header tarball'
+                    sh script: 'tar -czvf linux-headers-6.6.16.tar.gz $(find usr/include | grep \\.h$)', label: 'create header tarball'
                     archiveArtifacts artifacts: 'linux-headers-6.6.16.tar.gz', followSymlinks: false, fingerprint: true
                 }
             }

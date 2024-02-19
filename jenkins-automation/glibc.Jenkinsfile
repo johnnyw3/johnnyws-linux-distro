@@ -30,7 +30,7 @@ pipeline{
                 dir('build'){
                     // LLVM cannot build glibc
                     sh script: $/../configure BUILD_CC=gcc CC=gcc CXX=g++ --target=x86_64-linux --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu \
-                                 --with-sysroot=${params.SYSROOT_PATH} --with-headers=${params.SYSROOT_PATH}/usr/include --prefix=${params.SYSROOT_PATH}/usr \
+                                 --with-sysroot=${params.SYSROOT_PATH} --with-headers=${params.SYSROOT_PATH}/usr/include --prefix=/usr \
                                  --enable-kernel=6.6.0 libc_cv_slibdir=/usr/lib/$, label: 'configure glibc'
                     sh script: 'make -j16', label: 'build glibc'
                     sh script: "make DESTDIR=${params.SYSROOT_PATH} install -j16", label: 'install glibc'
